@@ -11,14 +11,14 @@ namespace Epsic.Info3e.Labo2.Tests
         [TestMethod, TestCategory("Step1")]
         public void CarImplementsIVehicle() 
         {
-            var result = typeof(Car).GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IVehicle));
+            var result = typeof(Car).GetInterfaces().Contains(typeof(IVehicle));
             Assert.AreEqual(true, result, "Car n'implémente pas IVehicle.");
         }
 
         [TestMethod, TestCategory("Step1")]
         public void TruckImplementsIVehicle() 
         {
-            var result = typeof(Truck).GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IVehicle));
+            var result = typeof(Truck).GetInterfaces().Contains(typeof(IVehicle));
             Assert.AreEqual(true, result, "Truck n'implémente pas IVehicle.");
         }
 
@@ -49,7 +49,7 @@ namespace Epsic.Info3e.Labo2.Tests
             var truck = new Truck();
             var sut = new List<IVehicle> { car, truck};
 
-            Assert.Equals(2, sut.Count);
+            Assert.AreEqual(2, sut.Count);
         }
     }
 }
