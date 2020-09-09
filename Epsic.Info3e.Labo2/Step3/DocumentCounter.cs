@@ -1,4 +1,4 @@
-namespace Epsic.Info3e.Labo2.Step2
+namespace Epsic.Info3e.Labo2.Step3
 {
     public abstract class DocumentCounter
     {
