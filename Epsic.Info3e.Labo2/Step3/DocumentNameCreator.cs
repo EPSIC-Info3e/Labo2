@@ -1,17 +1,19 @@
 namespace Epsic.Info3e.Labo2.Step3
 {
-    public class DocumentNameCreator : DocumentCounter
+    public class DocumentNameCreator
     {
         private string _prefix;
-        
-        public DocumentNameCreator(int increment, string prefix) : base(increment)
+        private Counter _counter;
+
+        public DocumentNameCreator(Counter counter, string prefix)
         {
             _prefix = prefix;
+            _counter = counter;
         }
 
-        public override string GetNewDocumentName()
+        public string GetNewDocumentName()
         {
-            return _prefix + GetAndIncrement();
+            return _prefix + _counter.GetAndIncrement();
         }
     }
 }
