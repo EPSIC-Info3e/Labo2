@@ -4,7 +4,7 @@
 //     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 //     [TestClass]
-//     public class Step2Tests
+//     public class Step3Tests
 //     {
 //         [TestMethod, TestCategory("Step3")]
 //         public void DocumentNameCreatorDontHeritsCounter() 
